@@ -126,7 +126,7 @@ function HeroVisual({ variant, accent }: { variant: string, accent: string }) {
   return <HeroCardStack accent={accent} />;
 }
 
-export default function Hero({ accent, headingFont, headline, variant }: { accent: string, headingFont: string, headline: string, variant: string }) {
+export default function Hero({ accent, headingFont, headline, variant, onEnroll }: { accent: string, headingFont: string, headline: string, variant: string, onEnroll: () => void }) {
   const lines = headline.split('\n');
   return (
     <section id="top" className="hero" data-screen-label="01 Hero">
@@ -151,7 +151,7 @@ export default function Hero({ accent, headingFont, headline, variant }: { accen
           </p>
 
           <div className="cta-row reveal r-3">
-            <a href="#payment" className="btn btn-primary" style={{ background: accent }}>
+            <a href="#payment" onClick={(e) => { e.preventDefault(); onEnroll(); }} className="btn btn-primary" style={{ background: accent }}>
               Enroll Now — $249
             </a>
             <a href="#curriculum" className="btn btn-ghost">

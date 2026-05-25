@@ -7,12 +7,14 @@ import Curriculum from "@/components/Curriculum";
 import Administrative from "@/components/Administrative";
 import Pricing from "@/components/Pricing";
 import Footer from "@/components/Footer";
-import ScrollProgress from "@/components/ScrollProgress";
 import TweaksUI, { useTweaks, TWEAK_DEFAULTS } from "@/components/Tweaks";
+import AuthModal from "@/components/AuthModal";
+import { useState } from "react";
 
 export default function Page() {
   const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
   const accent = tweaks.accent;
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
 
 
@@ -37,20 +39,21 @@ export default function Page() {
         ::selection { background: ${accent}33; color: #0D0F12; }
       `}</style>
 
-      <ScrollProgress show={tweaks.showProgressBar} accent={accent} />
-      <Nav accent={accent} />
+      <Nav accent={accent} onEnroll={() => setIsAuthModalOpen(true)} />
       <Hero
         accent={accent}
         headingFont={tweaks.headingFont}
         headline={tweaks.headline}
         variant={tweaks.heroVariant}
+        onEnroll={() => setIsAuthModalOpen(true)}
       />
       <Curriculum accent={accent} headingFont={tweaks.headingFont} />
       <Administrative accent={accent} headingFont={tweaks.headingFont} />
-      <Pricing accent={accent} headingFont={tweaks.headingFont} />
+      <Pricing accent={accent} headingFont={tweaks.headingFont} onEnroll={() => setIsAuthModalOpen(true)} />
       <Footer accent={accent} />
 
       <TweaksUI tweaks={tweaks} setTweak={setTweak} />
+      <AuthModal isOpen={isAuthModalOpen} onClose={() => setIsAuthModalOpen(false)} accent={accent} />
     </>
   );
 }

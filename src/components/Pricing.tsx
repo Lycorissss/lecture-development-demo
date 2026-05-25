@@ -19,7 +19,7 @@ function TrustItem({ icon, label, accent }: { icon: string, label: string, accen
   );
 }
 
-function PriceCard({ tier, price, period, features, cta, accent, featured }: { tier: string, price: string, period: string, features: string[], cta: string, accent: string, featured?: boolean }) {
+function PriceCard({ tier, price, period, features, cta, accent, featured, onEnroll }: { tier: string, price: string, period: string, features: string[], cta: string, accent: string, featured?: boolean, onEnroll: () => void }) {
   return (
     <div className={`price-card ${featured ? 'featured' : ''}`} style={featured ? { borderColor: accent } : {}}>
       {featured && (
@@ -40,6 +40,7 @@ function PriceCard({ tier, price, period, features, cta, accent, featured }: { t
         ))}
       </ul>
       <button
+        onClick={onEnroll}
         className={`price-cta ${featured ? 'cta-solid' : 'cta-ghost'}`}
         style={featured ? { background: accent } : {}}
       >
@@ -53,7 +54,7 @@ function PriceCard({ tier, price, period, features, cta, accent, featured }: { t
   );
 }
 
-export default function Pricing({ accent, headingFont }: { accent: string, headingFont: string }) {
+export default function Pricing({ accent, headingFont, onEnroll }: { accent: string, headingFont: string, onEnroll: () => void }) {
   const [billing, setBilling] = useState('one-time');
   return (
     <section id="payment" className="pricing" data-screen-label="04 Pricing">
@@ -99,6 +100,7 @@ export default function Pricing({ accent, headingFont }: { accent: string, headi
             ]}
             cta="Enroll as Individual"
             accent={accent}
+            onEnroll={onEnroll}
           />
           <PriceCard
             featured
@@ -114,6 +116,7 @@ export default function Pricing({ accent, headingFont }: { accent: string, headi
             ]}
             cta="Enroll Your Team"
             accent={accent}
+            onEnroll={onEnroll}
           />
         </div>
 
