@@ -33,31 +33,38 @@ function HeroCardStack({ accent }: { accent: string }) {
         <div className="progress">
           <div className="progress-fill" style={{ width: `${progress}%`, background: accent }} />
         </div>
-        <h3 className="stack-title">Foundations of Diplomacy</h3>
+        <h3 className="stack-title">3 Fase Utama</h3>
         <ul className="stack-list">
           {[
-            'Understanding international relations',
-            'Diplomatic protocols',
-            'Cross-cultural communication'
+            <div key="m1"><b>Module 1:</b> The Philosophy of Projectising Life (Structure, Meaning, and Independence).</div>,
+            <div key="m2">
+              <b>Module 2:</b> The 3 Pillars of Project Development
+              <div style={{ paddingLeft: '8px', marginTop: '4px', fontSize: '12.5px', color: '#6B6F7A' }}>
+                <div>• Phase A: Preparation Phase (Blueprint & Analysis)</div>
+                <div>• Phase B: Execution Phase (Dynamic vs Static)</div>
+                <div>• Phase C: Finalisation & Dissemination</div>
+              </div>
+            </div>,
+            <div key="m3"><b>Module 3:</b> Public-Private Partnerships (PPP) (Studi kasus nyata seperti Jakarta MRT).</div>
           ].map((t, i) => (
-            <li key={i}>
-              <span className="check" style={{ background: accent }}>
+            <li key={i} style={{ alignItems: 'flex-start' }}>
+              <span className="check" style={{ background: accent, marginTop: '2px', flexShrink: 0 }}>
                 <svg viewBox="0 0 12 12" width="10" height="10">
-                  <path d="M2.5 6.2 L5 8.5 L9.5 3.8" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M2.5 6.2 L5 8.5 L9.5 3.8" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </span>
-              {t}
+              <div style={{ flex: 1, lineHeight: 1.5 }}>{t}</div>
             </li>
           ))}
         </ul>
         <div className="stack-foot">
-          <div className="avatar" style={{ background: `linear-gradient(135deg, ${accent}, #7A4DFF)` }}>DD</div>
+          <div className="avatar" style={{ background: `linear-gradient(135deg, ${accent}, #7447fbff)` }}>DD</div>
           <div className="stack-author">
             <div className="author-name">Daniel Dobrev</div>
             <div className="author-role">Head of Trade and Economic Office</div>
           </div>
           <button className="play-btn" style={{ borderColor: accent, color: accent }}>
-            <svg viewBox="0 0 12 14" width="9" height="11" fill="currentColor"><path d="M1 1 L11 7 L1 13 Z"/></svg>
+            <svg viewBox="0 0 12 14" width="9" height="11" fill="currentColor"><path d="M1 1 L11 7 L1 13 Z" /></svg>
           </button>
         </div>
       </div>
@@ -136,11 +143,11 @@ export default function Hero({ accent, headingFont, headline, variant }: { accen
 
           <h1 className="hero-title reveal r-1" style={{ fontFamily: `var(--font-${headingFont.replace(' ', '-').toLowerCase()}), "${headingFont}", serif` }}>
             {lines[0]}
-            {lines[1] && (<><br/><em>{lines[1]}</em></>)}
+            {lines[1] && (<><br /><em>{lines[1]}</em></>)}
           </h1>
 
           <p className="hero-sub reveal r-2">
-            A structured video lecture series for diplomats, trade representatives, and entrepreneurs navigating international markets and investments.
+            Master the Project Management Platform (PMP) & PPP as a practical method and a life philosophy.
           </p>
 
           <div className="cta-row reveal r-3">
@@ -166,15 +173,15 @@ export default function Hero({ accent, headingFont, headline, variant }: { accen
 
       <div className="hero-marquee">
         <div className="marquee-track">
-          {Array.from({length: 2}).map((_, i) => (
+          {Array.from({ length: 2 }).map((_, i) => (
             <div key={i} className="marquee-row">
-              <span>DIPLOMACY</span><Dot accent={accent}/>
-              <span>INTERNATIONAL TRADE</span><Dot accent={accent}/>
-              <span>EU FUNDS</span><Dot accent={accent}/>
-              <span>INVESTMENT SUPPORT</span><Dot accent={accent}/>
-              <span>BUSINESS DEVELOPMENT</span><Dot accent={accent}/>
-              <span>BALKAN MARKETS</span><Dot accent={accent}/>
-              <span>FOREIGN RELATIONS</span><Dot accent={accent}/>
+              <span>DIPLOMACY</span><Dot accent={accent} />
+              <span>INTERNATIONAL TRADE</span><Dot accent={accent} />
+              <span>EU FUNDS</span><Dot accent={accent} />
+              <span>INVESTMENT SUPPORT</span><Dot accent={accent} />
+              <span>BUSINESS DEVELOPMENT</span><Dot accent={accent} />
+              <span>BALKAN MARKETS</span><Dot accent={accent} />
+              <span>FOREIGN RELATIONS</span><Dot accent={accent} />
             </div>
           ))}
         </div>

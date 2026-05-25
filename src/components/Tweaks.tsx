@@ -13,7 +13,7 @@ export const TWEAK_DEFAULTS = {
   "headingFont": "Instrument Serif",
   "heroVariant": "card-stack",
   "showProgressBar": true,
-  "headline": "Master International\nTrade & Diplomacy."
+  "headline": "A project with planning becomes a transformation."
 };
 
 export default function TweaksUI({ tweaks, setTweak }: { tweaks: any, setTweak: any }) {
@@ -35,6 +35,7 @@ export default function TweaksUI({ tweaks, setTweak }: { tweaks: any, setTweak: 
         <TweakText
           label="Hero headline"
           value={tweaks.headline}
+          placeholder=""
           onChange={(v: string) => setTweak('headline', v)}
         />
       </TweakSection>
