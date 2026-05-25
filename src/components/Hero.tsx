@@ -33,7 +33,7 @@ function HeroCardStack({ accent }: { accent: string }) {
         <div className="progress">
           <div className="progress-fill" style={{ width: `${progress}%`, background: accent }} />
         </div>
-        <h3 className="stack-title">3 Fase Utama</h3>
+        <h3 className="stack-title">3 Main Phases</h3>
         <ul className="stack-list">
           {[
             <div key="m1"><b>Module 1:</b> The Philosophy of Projectising Life (Structure, Meaning, and Independence).</div>,
