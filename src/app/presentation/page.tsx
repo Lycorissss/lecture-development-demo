@@ -72,8 +72,8 @@ const SLIDES = [
     type: "closing" as const,
     title: "Thank You",
     subtitle: "Questions & Discussion",
-    description: "The A-TAMS MasterClass platform is built with Next.js, designed for scalability, and deployed on Vercel for instant global delivery.",
-    meta: "Built with Next.js · Deployed on Vercel",
+    description: "The MasterClass platform is built with Next.js, designed for scalability, and deployed on Server for instant global delivery.",
+    meta: "Built with Love by ATAMS Indonesia",
     link: BASE_URL,
   },
 ];
@@ -170,7 +170,7 @@ export default function PresentationPage() {
                 rel="noopener noreferrer"
                 style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", background: "#1D1D1F", color: "#fff", borderRadius: 8, fontSize: 14, fontWeight: 500, textDecoration: "none", transition: "opacity 0.2s" }}
               >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" /></svg>
                 Visit Live Demo
               </a>
               <div style={{ marginTop: 24, fontSize: 12, fontFamily: "monospace", color: "rgba(29,29,31,0.35)", letterSpacing: "0.08em" }}>
@@ -221,7 +221,7 @@ export default function PresentationPage() {
                     style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 13, fontWeight: 500, color: "#1D1D1F", textDecoration: "none", borderBottom: "1px solid rgba(29,29,31,0.2)", paddingBottom: 2, width: "fit-content", transition: "border-color 0.2s" }}
                   >
                     Open Live Demo
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" /></svg>
                   </a>
                 )}
               </div>
@@ -229,7 +229,7 @@ export default function PresentationPage() {
               {/* Mockup Column - Browser Frame with iframe */}
               <div style={{ position: "relative", width: "100%", height: "85vh", maxHeight: 750, display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <div style={{ position: "absolute", inset: 0, background: "#fff", border: "1px solid rgba(29,29,31,0.1)", borderRadius: 16, boxShadow: "0 20px 60px -15px rgba(0,0,0,0.1)", overflow: "hidden", display: "flex", flexDirection: "column" }}>
-                  
+
                   {/* Mac-style browser bar */}
                   <div style={{ height: 44, width: "100%", borderBottom: "1px solid rgba(29,29,31,0.05)", background: "#FAFAFA", display: "flex", alignItems: "center", padding: "0 16px", flexShrink: 0, justifyContent: "space-between" }}>
                     <div style={{ display: "flex", gap: 8 }}>
@@ -268,7 +268,7 @@ export default function PresentationPage() {
 
       {/* Footer Navigation */}
       <div style={{ position: "absolute", bottom: 0, left: 0, width: "100%", height: 60, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 40px", zIndex: 30 }}>
-        
+
         <div style={{ fontSize: 11, fontFamily: "monospace", color: "rgba(29,29,31,0.35)", letterSpacing: "0.15em", textTransform: "uppercase" }}>
           Confidential Pitch Deck
         </div>
